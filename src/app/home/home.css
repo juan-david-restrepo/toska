@@ -1,0 +1,241 @@
+
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px 40px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 0 0 18px 0;
+}
+
+.Promociones {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  width: 470px;
+}
+.btn-promo{
+  background-color: white;
+  color: #0d0d0d;
+  border-radius: 11px;
+  padding: 3px;
+  width: 90px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.promo-item {
+  position: relative;
+  border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.promo-item img {
+  width: 100%;
+  display: block;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 15px rgba(214, 214, 214, 0.4);
+}
+
+
+.info-adicional {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%); /* empieza fuera de la vista */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* al hacer hover la mostrar */
+.promo-item:hover .info-adicional {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+section {
+  flex: 1;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 0 0 40px 0;
+}
+
+.categorias {
+  margin-bottom: 30px;
+}
+
+.game-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(214, 214, 214, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(214, 214, 214, 0.7);
+}
+
+.game-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.game-info {
+  padding: 8px;
+}
+
+.game-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.game-price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #0066cc;
+}
+
+.carrusel {
+  position: relative;
+  box-shadow: 0 0 15px rgba(214, 214, 214, 0.4);
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  height: 700px;
+  width: 1370px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+
+}
+
+.carrusel-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+}
+
+.carrusel-overlay h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.carrusel-overlay p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.btn-comprar {
+  display: inline-block;
+  background: #ffffff;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background: #cacaca;
+}
+
+.cont-botones {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 92%;
+  margin-top: 23%;
+}
+
+.carrusel button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.precio-carr{
+  margin-top: 10px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.precio {
+  margin-top: 10px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  border: none;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.precio-descuento {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+

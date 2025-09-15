@@ -1,0 +1,129 @@
+<app-nav></app-nav>
+<main>
+  <app-buscador></app-buscador>
+  <header>
+    <div
+      class="carrusel"
+      [style.backgroundImage]="'url(' + carouselItems[currentIndex].img + ')'"
+    >
+      <!-- Overlay con info dinámica -->
+      <div class="carrusel-overlay">
+        <h2>{{ carouselItems[currentIndex].titulo }}</h2>
+        <p>{{ carouselItems[currentIndex].descripcion }}</p>
+        <div class="precio-carr">
+          <span class="precio-carr">{{ carouselItems[currentIndex].precio }}</span>
+        </div>
+        <a class="btn-comprar"
+          [routerLink]="['/detalles', carouselItems[currentIndex].id]"
+          [state]="{ juego: carouselItems[currentIndex]}">
+          Comprar ahora
+        </a>
+      </div>
+
+      <div class="cont-botones">
+        <button (click)="prevSlide()">❮</button>
+        <button (click)="nextSlide()">❯</button>
+      </div>
+    </div>    
+
+    
+
+    <div class="Promociones">
+      <h2>{{ promiciones() }}</h2>
+
+      <div class="promo-item">
+        <img src="assets/images/terraria.jpg" alt="" />
+        <div class="info-adicional">
+          Terraria es un juego de aventura y exploración con construcción y combate en un mundo
+          abierto.
+          <div class="precio">
+            <span class="precio-original">$120.000</span>
+            <span class="precio-descuento">$85.000</span>
+            <button class="btn-promo">Obtener</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-item">
+        <img src="assets/images/black-ops-6-.jpg" alt="" />
+        <div class="info-adicional">
+          Call of Duty Black Ops 6 trae acción intensa, nuevos modos multijugador y una campaña
+          épica.
+          <div class="precio">
+            <span class="precio-original">$120.000</span>
+            <span class="precio-descuento">$85.000</span>
+            <button class="btn-promo">Obtener</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-item">
+        <img src="assets/images/the-ast-of-us.webp" alt="" />
+        <div class="info-adicional">
+          The Last of Us cuenta una historia emocional en un mundo postapocalíptico con
+          supervivencia y acción.
+          <div class="precio">
+            <span class="precio-original">$120.000</span>
+            <span class="precio-descuento">$85.000</span>
+            <button class="btn-promo">Obtener</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div id="mas-jugados">
+      <h2 class="categorias">{{ masJugados() }}</h2>
+      <div class="games-grid">
+        @for (game of juegos; track game.id) {
+        <div class="game-card">
+          <a [routerLink]="['/detalles', game.id]">
+            <img [src]="game.img" [alt]="game.titulo" />
+            <div class="game-info">
+              <div class="game-title">{{ game.titulo }}</div>
+              <div class="game-price">{{ game.precio }}</div>
+            </div>
+          </a>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div id="mas-vendidos">
+      <h2 class="categorias">Mas Vendidos</h2>
+      <div class="games-grid">
+        @for (game of juegos; track game.id) {
+        <div class="game-card">
+          <a [routerLink]="['/detalles', game.id]">
+            <img [src]="game.img" [alt]="game.titulo" />
+            <div class="game-info">
+              <div class="game-title">{{ game.titulo }}</div>
+              <div class="game-price">{{ game.precio }}</div>
+            </div>
+          </a>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div id="gratis">
+      <h2 class="categorias">Gratis</h2>
+      <div class="games-grid">
+        @for (game of juegos; track game.id) {
+        <div class="game-card">
+          <a [routerLink]="['/detalles', game.id]">
+            <img [src]="game.img" [alt]="game.titulo" />
+            <div class="game-info">
+              <div class="game-title">{{ game.titulo }}</div>
+              <div class="game-price">{{ game.precio }}</div>
+            </div>
+          </a>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

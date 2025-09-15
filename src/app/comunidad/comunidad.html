@@ -1,0 +1,167 @@
+<app-nav></app-nav>
+
+  <div class="wrap">
+    <div style="display: flex; gap: 80px; align-items: center">
+      <div class="search" role="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path
+            d="M21 21l-4.35-4.35"
+            stroke="#fff"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <input placeholder="Buscar temas, usuarios..." aria-label="buscar" />
+      </div>
+      <button class="btn">Crear Post</button>
+    </div>
+
+    <main class="grid">
+      <!-- FEED -->
+      <section>
+        <div class="card">
+          <div class="new-post">
+            <div class="avatar">MF</div>
+            <div class="composer">
+              <textarea
+                placeholder="¿Qué quieres compartir hoy?"
+                aria-label="nuevo post"
+              ></textarea>
+              <div class="controls">
+                <div style="display: flex; gap: 8px; align-items: center">
+                  <button class="btn ghost">Adjuntar</button>
+                  <button class="btn ghost">Etiquetar</button>
+                </div>
+                <div>
+                  <button class="btn">Publicar</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+
+          <article class="post">
+            <div class="avatar">AJ</div>
+            <div class="content">
+              <div class="meta">
+                <strong>AJ_Gamer</strong><span>·</span><span>2h</span
+                ><span class="muted"> · Foro · Guía</span>
+              </div>
+              <h3>Guía rápida para subir de nivel en Shadowlands</h3>
+              <p>
+                Comparto un par de rutas y builds que me funcionaron en las últimas semanas —
+                también dejo un link al stream donde lo probé.
+              </p>
+              <div class="actions">
+                <button class="chip">👍 42</button>
+                <button class="chip">💬 8</button>
+                <button class="chip">🔗 Compartir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="avatar">LV</div>
+            <div class="content">
+              <div class="meta">
+                <strong>LevelUp</strong><span>·</span><span>5h</span
+                ><span class="muted"> · Evento · Torneo</span>
+              </div>
+              <h3>Torneo semanal: inscripción abierta</h3>
+              <p>
+                Este viernes organizamos un torneo 2v2 con premios en giftcards. Inscribirse en el
+                hilo oficial.
+              </p>
+              <div class="actions">
+                <button class="chip">🏆 129</button>
+                <button class="chip">💬 62</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="avatar">LV</div>
+            <div class="content">
+              <div class="meta">
+                <strong>LevelUp</strong><span>·</span><span>5h</span
+                ><span class="muted"> · Evento · Torneo</span>
+              </div>
+              <h3>Torneo semanal: inscripción abierta</h3>
+              <p>
+                Este viernes organizamos un torneo 2v2 con premios en giftcards. Inscribirse en el
+                hilo oficial.
+              </p>
+              <div class="actions">
+                <button class="chip">🏆 129</button>
+                <button class="chip">💬 62</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="card section">
+          <h4 style="margin: 0 0 8px 0">Usuarios en línea</h4>
+          <div class="online-list">
+            <div class="user-row">
+              <div class="uavatar">RA</div>
+              <div>
+                <strong>Razor</strong>
+                <div class="muted" style="font-size: 13px">Jugando: Apex Legends</div>
+              </div>
+            </div>
+
+            <div class="user-row">
+              <div class="uavatar">ZL</div>
+              <div>
+                <strong>ZeldaL</strong>
+                <div class="muted" style="font-size: 13px">Streaming</div>
+              </div>
+            </div>
+            <div class="user-row">
+              <div class="uavatar">MK</div>
+              <div>
+
+                <strong>Mako</strong>
+                <div class="muted" style="font-size: 13px">Disponible</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h4 style="margin: 0 0 8px 0">Tendencias</h4>
+          <div class="trending">
+            <div class="trend">
+              <div>#Shadowlands</div>
+              <div class="muted">+4.2k</div>
+            </div>
+            <div class="trend">
+              <div>#IndieSale</div>
+              <div class="muted">+1.3k</div>
+            </div>
+            <div class="trend">
+              <div>#TorneoGS</div>
+              <div class="muted">+890</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h4 style="margin: 0 0 8px 0">Reglas rápidas</h4>
+          <ol class="muted" style="padding-left: 18px; margin: 0; font-size: 14px">
+            <li>No spoilers sin aviso</li>
+            <li>Respeto entre usuarios</li>
+            <li>Prohibido compartir hacks</li>
+          </ol>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <app-footer></app-footer>
+

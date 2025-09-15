@@ -1,0 +1,45 @@
+.buscador-filtro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 84%;
+  gap: 30px;
+}
+
+input {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+aside h4 {
+  margin: 15px 0 8px;
+  font-weight: 500;
+}
+
+input[type='checkbox'] {
+  margin-right: 6px;
+}
+
+.search-box {
+  flex: 0.8;
+  border: 1px solid #c9c8c8;
+  border-radius: 20px;
+  padding: 6px 12px;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(214, 214, 214, 0.4);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #0d0d0d;
+}

@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+<main>
+  <app-buscador></app-buscador>
+  <div class="games-grid">
+    @for (game of juegos; track game.id) {
+    <div class="game-card">
+      <a [routerLink]="['/detalles', game.id]">
+        <img [src]="game.img" [alt]="game.titulo" />
+        <div class="game-info">
+          <div class="game-title">{{ game.titulo }}</div>
+          <div class="game-price">{{ game.precio }}</div>
+        </div>
+      </a>
+    </div>
+    }
+  </div>
+</main>
+<app-footer></app-footer>

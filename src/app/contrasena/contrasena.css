@@ -1,0 +1,83 @@
+.cont{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    flex: 1;
+}
+
+.FormContainer {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 25px;
+    width: 550px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(214, 214, 214, 0.4);
+}
+
+.FormContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 14px;
+    color: #aaa;
+}
+
+input {
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #111;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+input:focus {
+    border-color: rgb(220, 221, 221);
+    box-shadow: 0 0 6px rgb(217, 218, 218);
+}
+
+.Registrarme {
+    background: rgb(255, 255, 255);
+    color: black;
+    font-weight: 600;
+    border: none;
+    height: 45px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 15px;
+    transition: background 0.3s, transform 0.2s;
+    width: auto;
+}
+
+.Registrarme:hover {
+    background: #d7d8d8;
+    transform: scale(1.03);
+}
+
+main a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}

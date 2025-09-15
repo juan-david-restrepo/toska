@@ -1,0 +1,64 @@
+  <app-nav></app-nav>
+
+  <main>
+    <section class="product-section">
+      <img [src]="juego?.img" [alt]="juego?.titulo" />
+      <div class="product-info">
+        <div class="stock">En Stock</div>
+        <div class="price">${{ juego?.precio }}</div>
+        <select>
+          <option>Seleccionar</option>
+        </select>
+        <br />
+        <button class="add-cart">Agregar al carrito</button>
+        <div class="synopsis">
+          <b>Sinopsis</b><br />
+          {{ juego?.descripcion }}
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>Reseñas</h2>
+      <div class="review-cards">
+        <div class="card">
+          <div class="stars">★★★★☆</div>
+          <h3>Reseña 1</h3>
+          <p>Desc</p>
+          <div class="user">
+            <img src="user1.png" alt="User" />
+            <span>Brianzombie2000<br />Date</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="stars">☆☆☆☆☆</div>
+          <h3>Reseña 2</h3>
+          <p>Desc</p>
+          <div class="user">
+            <img src="user2.png" alt="User" />
+            <span>Juan jose ratero<br />Date</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="stars">☆☆☆☆☆</div>
+          <h3>Reseña 3</h3>
+          <p>Desc</p>
+          <div class="user">
+            <img src="user3.png" alt="User" />
+            <span>maicol copion<br />Date</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h3>Ofertas y Re-stock</h3>
+      <p>E-mails sobre ofertas, re-stocks y juegos nuevos!</p>
+      <input type="email" placeholder="you@example.com" />
+      <button>Enviar</button>
+    </section>
+  </main>
+
+  <app-footer></app-footer>

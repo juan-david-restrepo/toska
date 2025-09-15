@@ -1,0 +1,29 @@
+    <app-nav></app-nav>
+
+    <div class="cont">
+        <main>
+            <div class="FormContainer active" id="formRegistro">
+                <h2>Crear Cuenta</h2>
+                <form>
+                    <label>Email</label>
+                    <input type="email" placeholder="example@gmail.com" required>
+
+                    <label>{{contrasena()}}</label>
+                    <input type="password" required>
+
+                    <label>Usuario</label>
+                    <input type="text" required>
+
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" placeholder="DD/MM/AA" required>
+
+                    <button type="submit" class="Registrarme">{{registrarme()}}</button>
+                </form>
+            </div>
+
+        </main>
+    </div>
+
+
+
+    <app-footer></app-footer>

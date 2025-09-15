@@ -1,0 +1,39 @@
+<header>
+  <a routerLink="/" class="logo">Toska</a>
+  <nav >
+
+    <div class="contNav">
+      <button class="juegos" id="juegos" [routerLink]="['/']">{{ juegos() }}</button>
+      <a class="explorar" routerLink="/explorar" >{{ explorar() }}</a>
+      <a class="comunidad" routerLink="/comunidad" >{{ comunidad() }}</a>
+      <a class="ayuda" routerLink="/ayuda" >{{ ayuda() }}</a>
+      <div class="cart-container">
+        <button class="cart-button"  (click)="toggleCarrito()">
+          🛒
+          <span class="cart-count">{{ cantidadItems }}</span>
+        </button>
+
+        <!-- 🔹 Panel lateral del carrito -->
+        <div class="cart-panel" [class.open]="carritoAbierto">
+          <div class="cart-header">
+            <h3>Tu carrito</h3>
+            <button class="close-btn" (click)="toggleCarrito()">×</button>
+          </div>
+          <div class="cart-body">
+            <p *ngIf="items.length === 0">El carrito está vacío</p>
+            <div *ngFor="let item of items" class="cart-item">
+              <span>{{ item.nombre }}</span>
+              <span>${{ item.precio }}</span>
+            </div>
+          </div>
+          <div class="cart-footer" *ngIf="items.length > 0">
+            <button class="checkout-btn">Finalizar compra</button>
+          </div>
+        </div>  
+      </div>
+      <button class="botonLigin" id="iniciar" [routerLink]="['/login']">Iniciar sesion</button>
+      <button class="botonLigin" id="registrar" [routerLink]="['/registro']">Registrarme</button>
+    </div>
+
+  </nav>
+</header>

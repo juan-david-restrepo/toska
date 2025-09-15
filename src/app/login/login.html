@@ -1,0 +1,24 @@
+    <app-nav></app-nav>
+    <div class="cont">
+        <main>
+            <div class="FormContainer" id="formIniciarSesion" >
+                <h2>Iniciar Sesion</h2>
+                <form>
+                    <label>Email</label>
+                    <input type="email" placeholder="example@gmail.com" required>
+
+                    <label>Contraseña</label>
+                    
+                    <input type="password" required>
+
+                    <button type="submit" class="Registrarme">{{iniciar()}}</button>
+
+                    <a routerLink="/contrasena" id="RecuperarContraseña">{{contrasena()}}</a>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+
+
+    <app-footer></app-footer>

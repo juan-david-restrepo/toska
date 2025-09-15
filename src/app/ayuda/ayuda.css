@@ -1,0 +1,125 @@
+.cont {
+  display: flex;
+  justify-content: center;
+  padding: 90px 20px;
+}
+
+.main-soporte {
+  display: flex;
+  gap: 90px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+/* ==== FAQ ==== */
+.faq {
+  flex: 1;
+  min-width: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  background: rgba(30, 30, 30, 0.95);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(214, 214, 214, 0.2);
+}
+
+.faq-item h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ==== Formulario ==== */
+.form-soporte {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+.FormContainer {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 25px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(214, 214, 214, 0.4);
+}
+
+.FormContainer h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+label {
+  font-size: 14px;
+  color: #aaa;
+}
+
+input,
+textarea {
+  height: 40px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: #111;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+input:focus {
+  border-color: rgb(220, 221, 221);
+  box-shadow: 0 0 6px rgb(217, 218, 218);
+}
+
+.Registrarme {
+  background: rgb(255, 255, 255);
+  color: black;
+  font-weight: 600;
+  border: none;
+  height: 45px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 15px;
+  transition: background 0.3s, transform 0.2s;
+  width: auto;
+}
+
+main a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}

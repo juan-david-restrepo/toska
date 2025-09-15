@@ -1,0 +1,191 @@
+/* ==== Estilos base del nav (ajusta a tu propio tema) ==== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 2px solid rgb(243, 245, 245);
+  box-shadow: 0 0 15px rgba(214, 214, 214, 0.4);
+  height: 110px;
+  width: 100%;
+}
+
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+
+.contNav{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+
+}
+
+nav a:hover {
+  color: rgb(233, 233, 233);
+}
+
+.explorar{
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.comunidad{
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.ayuda{
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botonLigin {
+  width: 93px;
+  height: 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+  background: rgb(255, 255, 255);
+  color: black;
+  border: none;
+}
+
+.botonLigin:hover {
+  background: #cfcfcf;
+}
+
+.juegos {
+  padding: 6px 18px;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  border: none;
+}
+
+.juegos:hover {
+  background: #cfcfcf;
+}
+
+
+/* ==== Carrito ==== */
+.cart-container {
+  position: relative;
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  font-size: 20px;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background: #e74c3c;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -380px; /* Oculto inicialmente */
+  width: 380px;
+  height: 100%;
+  background: #1e1e1e;
+  color: #fff;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 999; /* Para estar encima del resto */
+}
+
+.cart-panel.open {
+  right: 0; /* Desliza hacia dentro */
+}
+
+.cart-header,
+.cart-footer {
+  padding: 16px;
+  border-bottom: 1px solid #333;
+}
+
+.cart-body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #3498db;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.checkout-btn:hover {
+  background: #2980b9;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
