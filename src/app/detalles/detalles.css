@@ -43,6 +43,8 @@ main {
 
 .product-info {
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 .stock {
@@ -174,4 +176,15 @@ select {
   background: #111;
   color: #fff;
   cursor: pointer;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.precio-descuento {
+  color: #ff4444;
+  font-weight: bold;
 }

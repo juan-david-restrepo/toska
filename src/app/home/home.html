@@ -4,7 +4,7 @@
   <header>
     <div
       class="carrusel"
-      [style.backgroundImage]="'url(' + carouselItems[currentIndex].img + ')'"
+      [style.backgroundImage]="'url(' + carouselItems[currentIndex].image + ')'"
     >
       <!-- Overlay con info dinámica -->
       <div class="carrusel-overlay">
@@ -31,18 +31,20 @@
     <div class="Promociones">
       <h2>{{ promiciones() }}</h2>
 
+
       <div class="promo-item">
         <img src="assets/images/terraria.jpg" alt="" />
+         @for (game of juegos; track game.id) {
         <div class="info-adicional">
-          Terraria es un juego de aventura y exploración con construcción y combate en un mundo
-          abierto.
           <div class="precio">
-            <span class="precio-original">$120.000</span>
-            <span class="precio-descuento">$85.000</span>
-            <button class="btn-promo">Obtener</button>
+            <span class="precio-original">${{game.original}}</span>
+            <span class="precio-descuento">${{game.descuento}}</span>
+            <a [routerLink]="['/detalles', game.id]"><button class="btn-promo">Obtener</button></a>
+                }
           </div>
         </div>
       </div>
+
 
       <div class="promo-item">
         <img src="assets/images/black-ops-6-.jpg" alt="" />

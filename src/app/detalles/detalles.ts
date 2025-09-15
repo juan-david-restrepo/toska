@@ -27,7 +27,7 @@ export class Detalles implements OnInit {
       return;
     }
 
-    //  si el usuario entra directo con /detalles/12
+    //  si el usuario entra directo con /detalles/id
     const id = Number(this.route.snapshot.paramMap.get('id'));
     if (id) {
       this.juegosService.getJuegoById(id).subscribe(j => this.juego = j);
