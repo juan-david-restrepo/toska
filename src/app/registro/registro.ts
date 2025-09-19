@@ -11,4 +11,11 @@ import { Footer } from '../shared/components/footer/footer';
 export class Registro {
   protected readonly contrasena = signal("Contraseña");
   protected readonly registrarme = signal("Registrarme")
+
+
+  
+
+
+
+
 }

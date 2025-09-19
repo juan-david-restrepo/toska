@@ -1,7 +1,19 @@
         <div class="buscador-filtro">
-            <div class="search-box">
-                <input type="text" placeholder="Buscar..." />
+            <div class="buscador-container">
+                <div class="search-box">
+                    <input id="buscador" type="text" placeholder="Buscar..." (input)="onBuscar($event)"/>
+                </div>
+                <ul *ngIf="filtro() !== ''" class="resultados-busqueda">
+                    <li *ngFor="let juego of juegosFiltrados()"
+                        [routerLink]="['/detalles', juego.id]"
+                        [state]="{juego: juego}">
+                        
+                        <img [src]="juego.img" alt="{{juego.titulo}}" width="30">
+                        <h3 class="titulo-busqueda">{{juego.titulo}}</h3>
+                    </li>
+                </ul>
             </div>
+
             <a href="#mas-jugados">{{MasJugados()}}</a>
             <a href="#gratis">{{gratis()}}</a>
             <a href="#mas-vendidos">Mas vendidos</a>

@@ -1,4 +1,5 @@
-  <app-nav></app-nav>
+  <app-nav>
+  </app-nav>
 
   <main>
     <section class="product-section">
@@ -10,13 +11,13 @@
         <div class="price-container">
           <!-- si el juego tiene descuento -->
           <ng-container *ngIf="juego?.descuento; else precioNormal">
-            <span class="precio-original">{{ juego?.original | currency:'USD' }}</span>
-            <span class="precio-descuento">{{ juego?.descuento | currency:'USD' }}</span>
+            <span class="precio-original">{{ juego?.original | currency:'COP':'symbol':'1.0-0' }}</span>
+            <span class="precio-descuento">{{ juego?.descuento | currency:'COP':'symbol':'1.0-0' }}</span>
           </ng-container>
 
           <!-- precio normal cuando no hay descuento esto es el else porque tiene el id-->
           <ng-template #precioNormal>
-            <div class="price">{{ juego?.precio | currency:'USD' }}</div>
+            <div class="price">{{ juego?.precio | currency:'USD' :'symbol':'1.0-0' }}</div> 
           </ng-template>
         </div>
 
@@ -27,7 +28,7 @@
         </select>
         <br />
 
-        <button class="add-cart">Agregar al carrito</button>
+        <button  class="add-cart">Agregar al carrito</button>
 
         <div class="synopsis">
           <b>Sinopsis</b><br />
@@ -55,7 +56,7 @@
           <p>Desc</p>
           <div class="user">
             <img src="user2.png" alt="User" />
-            <span>Juan jose ratero<br />Date</span>
+            <span>maicol copion<br />Date</span>
           </div>
         </div>
 
@@ -65,7 +66,7 @@
           <p>Desc</p>
           <div class="user">
             <img src="user2.png" alt="User" />
-            <span>Juan jose ratero<br />Date</span>
+            <span>maicol copion<br />Date</span>
           </div>
         </div>
         <div class="card">
@@ -74,7 +75,7 @@
           <p>Desc</p>
           <div class="user">
             <img src="user2.png" alt="User" />
-            <span>Juan jose ratero<br />Date</span>
+            <span>maicol copion<br />Date</span>
           </div>
         </div>
 
