@@ -42,7 +42,7 @@ main {
 }
 
 .product-info {
-  max-width: 600px;
+  width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -60,7 +60,7 @@ main {
 }
 
 select {
-  width: 200px;
+  width: auto;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -182,9 +182,14 @@ select {
   text-decoration: line-through;
   color: #888;
   margin-right: 8px;
+  font-weight: bold;
+  font-size: 22px;
+  
 }
 
 .precio-descuento {
   color: #ff4444;
   font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15px;
 }

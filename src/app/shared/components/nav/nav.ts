@@ -1,10 +1,11 @@
 import { Component, signal, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './nav.html',
   styleUrls: ['./nav.css']
 })

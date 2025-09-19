@@ -10,6 +10,7 @@ export interface Juego {
   descripcion: string;
   descuento?: number;
   original?: number;
+  image?: string;
 }
 
 @Injectable({
@@ -49,28 +50,31 @@ export class JuegosService {
 
       {id: 9, 
       titulo: 'Terraria',  
-      original: 120.000,
+      original: 120000,
       img: 'assets/images/terrariaC.jpg', 
+      image: 'assets/images/terraria.jpg',
       descripcion: `Terraria es un juego de aventura y exploración con construcción y combate en un mundo abierto.`, 
-      descuento: 85.000 
+      descuento: 85000,
     },
   
     {
       id: 10, 
       titulo: 'Call of duty', 
-      original:120.000,
+      original:120000,
       img: 'assets/images/call-of-duty-black-ops-6-C.jpg', 
+      image: 'assets/images/black-ops-6-.jpg',
       descripcion: `Call of Duty Black Ops 6 trae acción intensa, nuevos modos multijugador y una campaña épica.`,
-      descuento:85.000
+      descuento:85000,
     },
 
     {
       id: 11, 
       titulo: 'The last of us', 
-      original: 120.000,
+      original: 120000,
       img: 'assets/images/the_last_of_us_2-C.jpg', 
+      image: 'assets/images/the-ast-of-us.webp',
       descripcion: `The Last of Us cuenta una historia emocional en un mundo postapocalíptico con supervivencia y acción.`,
-      descuento: 85.000
+      descuento: 85000,
     },
         
 

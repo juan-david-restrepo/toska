@@ -5,16 +5,30 @@
       <img [src]="juego?.img" [alt]="juego?.titulo" />
       <div class="product-info">
         <div class="stock">En Stock</div>
-        <div class="price">${{ juego?.precio }}</div>
+
+        <!--  precio con lógica para mostrar descuento si existe -->
+        <div class="price-container">
+          <!-- si el juego tiene descuento -->
+          <ng-container *ngIf="juego?.descuento; else precioNormal">
+            <span class="precio-original">{{ juego?.original | currency:'USD' }}</span>
+            <span class="precio-descuento">{{ juego?.descuento | currency:'USD' }}</span>
+          </ng-container>
+
+          <!-- precio normal cuando no hay descuento esto es el else porque tiene el id-->
+          <ng-template #precioNormal>
+            <div class="price">{{ juego?.precio | currency:'USD' }}</div>
+          </ng-template>
+        </div>
+
         <select>
           <option>Seleccionar</option>
-          <option value="">Fisico</option>
+          <option value="">Físico</option>
           <option value="">Digital</option>
         </select>
         <br />
+
         <button class="add-cart">Agregar al carrito</button>
-          <span class="precio-original">{{juego?.descuento}}</span>
-          <span class="precio-descuento">{{juego?.original}}</span>
+
         <div class="synopsis">
           <b>Sinopsis</b><br />
           {{ juego?.descripcion }}
@@ -47,6 +61,25 @@
 
         <div class="card">
           <div class="stars">☆☆☆☆☆</div>
+          <h3>Reseña 2</h3>
+          <p>Desc</p>
+          <div class="user">
+            <img src="user2.png" alt="User" />
+            <span>Juan jose ratero<br />Date</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="stars">☆☆☆☆☆</div>
+          <h3>Reseña 2</h3>
+          <p>Desc</p>
+          <div class="user">
+            <img src="user2.png" alt="User" />
+            <span>Juan jose ratero<br />Date</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="stars">☆☆☆☆☆</div>
           <h3>Reseña 3</h3>
           <p>Desc</p>
           <div class="user">
@@ -55,7 +88,11 @@
           </div>
         </div>
       </div>
+
+      
     </section>
+
+    
 
     <section class="newsletter">
       <h3>Ofertas y Re-stock</h3>

@@ -5,11 +5,12 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { Buscador } from '../shared/components/buscador/buscador';
 import { JuegosService, Juego } from '../services/juegos';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common'; 
 
 
 @Component({
   selector: 'app-home',
-  imports: [Nav, Footer, Buscador, RouterModule, RouterLink],
+  imports: [Nav, Footer, Buscador, RouterModule, RouterLink, CommonModule],
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })

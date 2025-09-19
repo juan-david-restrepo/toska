@@ -1,4 +1,4 @@
-<app-nav></app-nav>
+<app-nav id="nav"></app-nav>
 <main>
   <app-buscador></app-buscador>
   <header>
@@ -29,48 +29,27 @@
     
 
     <div class="Promociones">
+
       <h2>{{ promiciones() }}</h2>
-
-
-      <div class="promo-item">
-        <img src="assets/images/terraria.jpg" alt="" />
-         @for (game of juegos; track game.id) {
+      <div class="promo-item"
+      *ngFor = "let promo of juegos | slice:8:11" 
+      [routerLink] = "['/detalles', promo.id]"
+      [state] = "{juego: promo}" > <!-- usa state para pasar el objeto promo completo igual que en el carrusel -->
+        <img [src]="promo.image" [alt]="" />
         <div class="info-adicional">
+          {{promo.descripcion}}
           <div class="precio">
-            <span class="precio-original">${{game.original}}</span>
-            <span class="precio-descuento">${{game.descuento}}</span>
-            <a [routerLink]="['/detalles', game.id]"><button class="btn-promo">Obtener</button></a>
-                }
-          </div>
-        </div>
-      </div>
-
-
-      <div class="promo-item">
-        <img src="assets/images/black-ops-6-.jpg" alt="" />
-        <div class="info-adicional">
-          Call of Duty Black Ops 6 trae acción intensa, nuevos modos multijugador y una campaña
-          épica.
-          <div class="precio">
-            <span class="precio-original">$120.000</span>
-            <span class="precio-descuento">$85.000</span>
+            <span class="precio-original">${{promo.original}}</span>
+            <span class="precio-descuento">${{promo.descuento}}</span>
             <button class="btn-promo">Obtener</button>
           </div>
         </div>
-      </div>
+      </div>  
 
-      <div class="promo-item">
-        <img src="assets/images/the-ast-of-us.webp" alt="" />
-        <div class="info-adicional">
-          The Last of Us cuenta una historia emocional en un mundo postapocalíptico con
-          supervivencia y acción.
-          <div class="precio">
-            <span class="precio-original">$120.000</span>
-            <span class="precio-descuento">$85.000</span>
-            <button class="btn-promo">Obtener</button>
-          </div>
-        </div>
-      </div>
+      <a href="#nav"><button class="btn-flotante">↑</button></a>
+
+
+
     </div>
   </header>
 
@@ -83,8 +62,12 @@
           <a [routerLink]="['/detalles', game.id]">
             <img [src]="game.img" [alt]="game.titulo" />
             <div class="game-info">
-              <div class="game-title">{{ game.titulo }}</div>
-              <div class="game-price">{{ game.precio }}</div>
+              <span class="game-title">{{ game.titulo }}</span>
+              <span class="game-price">{{ game.precio }}</span>
+              <div class="orinal-desc">
+                <span class="precio-original">{{ game.original }}</span>
+                <span class="game-price">{{ game.descuento }}</span>
+              </div>
             </div>
           </a>
         </div>
@@ -100,8 +83,12 @@
           <a [routerLink]="['/detalles', game.id]">
             <img [src]="game.img" [alt]="game.titulo" />
             <div class="game-info">
-              <div class="game-title">{{ game.titulo }}</div>
-              <div class="game-price">{{ game.precio }}</div>
+              <span class="game-title">{{ game.titulo  }}</span>
+              <span class="game-price">{{ game.precio }}</span>
+              <div class="orinal-desc">
+                <span class="precio-original">{{ game.original }}</span>
+                <span class="game-price">{{ game.descuento }}</span>
+              </div>
             </div>
           </a>
         </div>
@@ -117,8 +104,12 @@
           <a [routerLink]="['/detalles', game.id]">
             <img [src]="game.img" [alt]="game.titulo" />
             <div class="game-info">
-              <div class="game-title">{{ game.titulo }}</div>
-              <div class="game-price">{{ game.precio }}</div>
+              <span class="game-title">{{ game.titulo }}</span>
+              <span class="game-price">{{ game.precio }}</span>
+              <div class="orinal-desc">
+                <span class="precio-original">{{ game.original }}</span>
+                <span class="game-price">{{ game.descuento }}</span>
+              </div>
             </div>
           </a>
         </div>
