@@ -5,7 +5,7 @@
     <section class="product-section">
       <img [src]="juego?.img" [alt]="juego?.titulo" />
       <div class="product-info">
-        <div class="stock">En Stock</div>
+        <div class="stock">Precio</div>
 
         <!--  precio con lógica para mostrar descuento si existe -->
         <div class="price-container">
@@ -29,11 +29,24 @@
         <br />
 
         <button  class="add-cart">Agregar al carrito</button>
-
         <div class="synopsis">
-          <b>Sinopsis</b><br />
-          {{ juego?.descripcion }}
-        </div>
+            <b>Sinopsis</b><br />
+            {{ juego?.descripcion }}
+          </div>
+        <!-- @if(mostrarElemento()){
+          <div class="synopsis">
+            <b>Sinopsis</b><br />
+            {{ juego?.descripcion }}
+            <button (click)="toggleElemento()">ver mas...</button>
+          </div>
+        } @else {
+          <div class="synopsis" [ngStyle]="{'height.px': altura}">
+            <b>Sinopsis</b><br />
+            {{ juego?.descripcion }}
+            <button (click)="toggleElemento()">ver menos...</button>
+          </div>
+        } -->
+
       </div>
     </section>
 
@@ -49,6 +62,7 @@
             <span>Brianzombie2000<br />Date</span>
           </div>
         </div>
+
 
         <div class="card">
           <div class="stars">☆☆☆☆☆</div>

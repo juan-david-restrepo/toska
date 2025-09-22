@@ -120,29 +120,3 @@ label {
 .buscador a{
   display: none;
 }
-
-/* Botón flotante */
-.btn-flotante-ex {
-  position: fixed; /* fijo en pantalla */
-  bottom: 30px; /* distancia desde el borde inferior */
-  right: 30px; /* distancia desde el borde derecho */
-  width: 55px;
-  height: 55px;
-  background-color: #000000; 
-  color: white;
-  border: none;
-  border-radius: 50%;       
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-  z-index: 1;   
-  border: 1px solid #e5e5e5; /* para que quede por encima de todo */
-}
-
-.btn-flotante-ex:hover {
-  background-color: #d8d1d1; 
-  transform: scale(1.1);
-  color: #000000;
-}

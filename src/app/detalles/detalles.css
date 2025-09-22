@@ -79,12 +79,14 @@ select {
 }
 
 .synopsis {
+  overflow: hidden;
   font-size: 14px;
   line-height: 1.5;
   background: #000;
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #ddd;
+  transition: height 0.3s ease;
 }
 
 .reviews {
@@ -191,4 +193,13 @@ select {
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 15px;
+}
+
+.ver{
+  background: none;
+  border: none;
+  color: #42b883;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { CurrencyPipe, CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { JuegosService, Juego } from '../services/juegos';
@@ -13,6 +13,8 @@ import { Footer } from '../shared/components/footer/footer';
   styleUrls: ['./detalles.css']
 })
 export class Detalles implements OnInit {
+  // protected readonly mostrarElemento = signal(true);
+  // altura = 100; 
   juego?: Juego;
 
   constructor(
@@ -20,6 +22,11 @@ export class Detalles implements OnInit {
     private juegosService: JuegosService
   ) {}
 
+
+  // toggleElemento() {
+  //   this.mostrarElemento.update(valor => !valor);
+  //   this.altura = (this.altura === 180) ? 300 : 180;
+  // }
   ngOnInit() {
     const nav = history.state as { juego?: Juego };
     if (nav.juego) {
