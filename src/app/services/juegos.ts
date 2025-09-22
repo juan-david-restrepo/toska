@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 export interface Juego {
   id: number;
   titulo: string;
-  precio?: number;
+  precio?:any;
   img: string;
   descripcion: string;
   descuento?: number;
@@ -124,7 +124,7 @@ export class JuegosService {
       img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYNIEqftDXtPbOU-4shNeKJgQ052cmEQWx4g&s',
       titulo: 'Fortnite',
       descripcion: 'El battle royale más popular.',
-      precio: 0,
+      precio: "gratis",
     },
     {
       id: 14,
@@ -139,6 +139,22 @@ export class JuegosService {
       image:'https://media.vandal.net/m/4-2018/201841318231_1.jpg',
       img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wcytnZ6IRRFUAJXUOBoSNBFywOVTisRAMA&s',
       titulo: 'The Forest',
+      descripcion: 'Sobrevive en una isla llena de misterios.',
+      precio: 90000,
+    },
+
+        {
+      id: 16,
+      img:'https://i.3djuegos.com/juegos/11043/the_master_chief_collection/fotos/ficha/the_master_chief_collection-2548530.jpg',
+      titulo: 'Halo',
+      descripcion: 'Salva el universo de los aliens malvados.',
+      precio: 70000,
+    },
+
+        {
+      id: 17,
+      img:'https://pbs.twimg.com/media/Fd1nzR4X0AAnsB6.jpg:large',
+      titulo: 'Zelda',
       descripcion: 'Sobrevive en una isla llena de misterios.',
       precio: 90000,
     }

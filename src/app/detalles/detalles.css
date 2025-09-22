@@ -2,7 +2,6 @@ main {
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  background: #0d0d0d;
   padding: 40px 80px;
   margin: 0;
   gap: 40px;

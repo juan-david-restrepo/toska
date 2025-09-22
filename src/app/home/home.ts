@@ -23,7 +23,7 @@ export class Home implements OnInit, OnDestroy {
       img:'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2018/05/red-dead-redemption-2_17.jpg?tf=3840x',
       titulo: 'Red Dead Redemption 2',
       descripcion: 'Vive la aventura en el Salvaje Oeste.',
-      precio: '120.000',
+      precio: '120000',
     },
     {
       id: 13,
@@ -39,7 +39,7 @@ export class Home implements OnInit, OnDestroy {
       img:'',
       titulo: 'Detroit Become Human',
       descripcion: 'Una historia futurista llena de decisiones.',
-      precio: '140.000',
+      precio: '140000',
     },
     {
       id: 15,
@@ -47,7 +47,7 @@ export class Home implements OnInit, OnDestroy {
       img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wcytnZ6IRRFUAJXUOBoSNBFywOVTisRAMA&s',
       titulo: 'The Forest',
       descripcion: 'Sobrevive en una isla llena de misterios.',
-      precio: '90.000',
+      precio: '90000',
     }
   ];
 

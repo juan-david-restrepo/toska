@@ -1,18 +1,69 @@
-<app-nav></app-nav>
+<app-nav id="navEx"></app-nav>
 <main>
-  <app-buscador></app-buscador>
-  <div class="games-grid">
-    @for (game of juegos; track game.id) {
-    <div class="game-card">
-      <a [routerLink]="['/detalles', game.id]">
-        <img [src]="game.img" [alt]="game.titulo" />
-        <div class="game-info">
-          <div class="game-title">{{ game.titulo }}</div>
-          <div class="game-price">{{ game.precio }}</div>
-        </div>
-      </a>
+  
+  <!-- Buscador arriba -->
+  <app-buscador id="buscador" class="buscador"></app-buscador>
+
+  <!-- Contenedor en dos columnas -->
+  <div class="content">
+    <!-- Columna izquierda: Juegos -->
+    <div class="games-grid">
+      <div class="game-card" *ngFor="let game of juegosFiltrados">
+        <a [routerLink]="['/detalles', game.id]">
+          <img [src]="game.img" [alt]="game.titulo" />
+          <div class="game-info">
+            <h4>{{ game.titulo }}</h4>
+            <p>
+              $<span class="precio-original">{{ game.original }}</span>{{ game.precio }}
+              <span class="game-price">{{ game.descuento }}</span>
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
-    }
+
+    <!-- <div class="games-grid">
+      @for (game of juegos; track game.id) {
+      <div class="game-card">
+        <a [routerLink]="['/detalles', game.id]">
+          <img [src]="game.img" [alt]="game.titulo" />
+          <div class="game-info">
+            <span class="game-title">{{ game.titulo }}</span>
+            <span class="game-price">{{ game.precio }}</span>
+            <div class="orinal-desc">
+              <span class="precio-original">{{ game.original }}</span>
+              <span class="game-price">{{ game.descuento }}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      }
+    </div> -->
+
+
+    <!-- Columna derecha: Filtros -->
+    <aside class="filters">
+      <h3>Filtros por precio</h3>
+      <div>
+        <label>Precio mínimo:</label>
+        <input
+          class="filterInput"
+          type="number"
+          [(ngModel)]="filtroMin"
+          (input)="aplicarFiltros()"
+        />
+      </div>
+      <div>
+        <label>Precio máximo:</label>
+        <input
+          class="filterInput"
+          type="number"
+          [(ngModel)]="filtroMax"
+          (input)="aplicarFiltros()"
+        />
+      </div>
+    </aside>
   </div>
+    <a href="#navEx/explorar"><button class="btn-flotante-ex">↑</button></a>
 </main>
 <app-footer></app-footer>

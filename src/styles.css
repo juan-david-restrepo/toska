@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
 * {
     margin: 0;
     padding: 0;
@@ -18,4 +18,39 @@ html, body{
     height: 100%;
   scroll-behavior: smooth;
 }
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  position: relative; /* importante */
+  font-family: 'Poppins', sans-serif;
+  background: url('../public/assets/images/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  z-index: 0; /* para que el ::before quede debajo del contenido */
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+  pointer-events: none;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}

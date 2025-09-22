@@ -36,9 +36,5 @@ export class Detalles implements OnInit {
 
   
 
-  function  carrio(params:type) {
-    
-  }
-
 }
 
